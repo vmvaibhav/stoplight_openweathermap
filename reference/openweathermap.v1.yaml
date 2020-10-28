@@ -14,7 +14,14 @@ info:
 servers:
   - url: 'https://api.openweathermap.org/data/2.5'
     description: prod
-paths: {}
+paths:
+  /weather:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - Weather endpoints
+      responses: {}
+      operationId: get-weather
 components:
   schemas: {}
   securitySchemes:
@@ -22,3 +29,5 @@ components:
       type: apiKey
       in: query
       name: appid
+tags:
+  - name: Weather endpoints
